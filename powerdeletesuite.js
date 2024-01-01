@@ -1,6 +1,6 @@
 var pd = {
-  version: "1.4.9",
-  bookmarkver: "1.4",
+  version: "1.5",
+  bookmarkver: "1.5",
   editStrings: [
     "I love ice cream.",
     "I hate beer.",
@@ -135,12 +135,13 @@ var pd = {
       if ($("#pd__style").length === 0) {
         $("head").first().append("<style id='pd__style' />");
       }
-      pd.setup.applyStyles();
+      pd.setup.applyStyles(); 
       pd.setup.applyCentral();
     },
     applyStyles: function () {
       $.ajax({
-        url: "/r/PowerDeleteSuite/about/stylesheet/.json",
+        // fetch stylesheet from local, for suspended accounts
+        url: "./powerdeletesuite_stylesheet.json",
         context: $("#pd__style"),
       }).then(
         function (data) {
