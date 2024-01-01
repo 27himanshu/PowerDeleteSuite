@@ -141,7 +141,7 @@ var pd = {
     applyStyles: function () {
       $.ajax({
         // fetch stylesheet from local, for suspended accounts
-        url: "./powerdeletesuite_stylesheet.json",
+        url: "https://raw.githubusercontent.com/27himanshu/PowerDeleteSuite/master/powerdeletesuite_stylesheet.json",
         context: $("#pd__style"),
       }).then(
         function (data) {
